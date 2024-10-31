@@ -35,7 +35,7 @@ export default function SearchedBus() {
         return;
       }
       const response = await axios.get(
-        `https://backend-brahmos-bus.onrender.com/api/busregister/searchbus?BoardingPoint=${startLocation}&DroppingPoint=${endLocation}`,
+        `https://brahmosbackend.onrender.com/api/busregister/searchbus?BoardingPoint=${startLocation}&DroppingPoint=${endLocation}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }

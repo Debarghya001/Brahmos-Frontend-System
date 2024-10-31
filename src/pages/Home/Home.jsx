@@ -34,7 +34,7 @@ const Home = () => {
         navigate('/login')
         return
       }
-      const locationresponse = await axios.get('https://backend-brahmos-bus.onrender.com/api/location/findlocation', {
+      const locationresponse = await axios.get('https://brahmosbackend.onrender.com/api/location/findlocation', {
         headers: { Authorization: `Bearer ${token}` }
       })
       setLocations(locationresponse.data.fetch)

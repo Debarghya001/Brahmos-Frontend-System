@@ -28,7 +28,7 @@ function Navbar({ className, page }) {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await axios.get('https://backend-brahmos-bus.onrender.com/api/auth/myprofile', {
+        const res = await axios.get('https://brahmosbackend.onrender.com/api/auth/myprofile', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
@@ -65,7 +65,7 @@ function Navbar({ className, page }) {
 
   const handleLogout = async () => {
     try {
-      await axios.post('https://backend-brahmos-bus.onrender.com/api/auth/logout', {}, {
+      await axios.post('https://brahmosbackend.onrender.com/api/auth/logout', {}, {
         withCredentials: true, // Ensures cookies are included
       });
       // Clear localStorage items

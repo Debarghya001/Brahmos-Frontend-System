@@ -20,7 +20,7 @@ const MyBookings = () => {
         navigate('/login');
         return;
       }
-      const response = await axios.get('https://backend-brahmos-bus.onrender.com/api/busbooking/admin/mybookings', {
+      const response = await axios.get('https://brahmosbackend.onrender.com/api/busbooking/admin/mybookings', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setBookings(response.data.Mybookings);
@@ -37,7 +37,7 @@ const MyBookings = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.put(
-        `https://backend-brahmos-bus.onrender.com/api/busbooking/admin/mybookings/verifysale/${bookingId}`,
+        `https://brahmosbackend.onrender.com/api/busbooking/admin/mybookings/verifysale/${bookingId}`,
         { isVerified: 'verified' },
         {
           headers: { Authorization: `Bearer ${token}` }
@@ -53,7 +53,7 @@ const MyBookings = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.put(
-        `https://backend-brahmos-bus.onrender.com/api/busbooking/admin/mybookings/verifysale/${bookingId}`,
+        `https://brahmosbackend.onrender.com/api/busbooking/admin/mybookings/verifysale/${bookingId}`,
         { isVerified: 'canceled' },
         {
           headers: { Authorization: `Bearer ${token}` }

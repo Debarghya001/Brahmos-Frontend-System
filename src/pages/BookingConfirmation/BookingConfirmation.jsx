@@ -31,7 +31,7 @@ const BookingConfirmation = () => {
                 }
 
                 const userResponse = await axios.get(
-                    'https://backend-brahmos-bus.onrender.com/api/auth/myprofile',
+                    'https://brahmosbackend.onrender.com/api/auth/myprofile',
                     { headers: { Authorization: `Bearer ${token}` } }
                 );
 
@@ -39,7 +39,7 @@ const BookingConfirmation = () => {
                 setUserDetails({ name, email, age });
 
                 const busResponse = await axios.post(
-                    'https://backend-brahmos-bus.onrender.com/api/busbooking/calculateFareAndDetails',
+                    'https://brahmosbackend.onrender.com/api/busbooking/calculateFareAndDetails',
                     {
                         busid,
                         seatnumber,
@@ -81,7 +81,7 @@ const BookingConfirmation = () => {
             }
 
             const response = await axios.post(
-                'https://backend-brahmos-bus.onrender.com/api/busbooking/booking',
+                'https://brahmosbackend.onrender.com/api/busbooking/booking',
                 {
                     busid,
                     seatnumber,

@@ -34,7 +34,7 @@ export default function Location() {
         navigate('/login');
         return;
       }
-      const response = await axios.get('https://backend-brahmos-bus.onrender.com/api/location/findlocation', {
+      const response = await axios.get('https://brahmosbackend.onrender.com/api/location/findlocation', {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -76,7 +76,7 @@ export default function Location() {
         return;
       }
 
-      await axios.post('https://backend-brahmos-bus.onrender.com/api/location/addlocation', form, {
+      await axios.post('https://brahmosbackend.onrender.com/api/location/addlocation', form, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -105,7 +105,7 @@ export default function Location() {
         return;
       }
 
-      await axios.delete(`https://backend-brahmos-bus.onrender.com/api/location/deletelocation/${id}`, {
+      await axios.delete(`https://brahmosbackend.onrender.com/api/location/deletelocation/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }

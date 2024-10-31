@@ -25,7 +25,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://backend-brahmos-bus.onrender.com/api/auth/register', {
+      const response = await axios.post('https://brahmosbackend.onrender.com/api/auth/register', {
         name: formData.name,
         phonenumber: formData.phonenumber,
         email: formData.email,

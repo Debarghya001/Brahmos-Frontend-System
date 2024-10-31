@@ -49,7 +49,7 @@ const MyBuses = () => {
         return;
       }
 
-      const response = await axios.get(`https://backend-brahmos-bus.onrender.com/api/busregister/mybus/${userId}`, {
+      const response = await axios.get(`https://brahmosbackend.onrender.com/api/busregister/mybus/${userId}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
 
@@ -80,7 +80,7 @@ const MyBuses = () => {
         return;
       }
 
-      const locationResponse = await axios.get('https://backend-brahmos-bus.onrender.com/api/location/findlocation', {
+      const locationResponse = await axios.get('https://brahmosbackend.onrender.com/api/location/findlocation', {
         headers: { Authorization: `Bearer ${token}` }
       });
 
@@ -108,7 +108,7 @@ const MyBuses = () => {
         return;
       }
 
-      const response = await axios.delete(`https://backend-brahmos-bus.onrender.com/api/busregister/deletebus/${busName}`, {
+      const response = await axios.delete(`https://brahmosbackend.onrender.com/api/busregister/deletebus/${busName}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
 
@@ -143,7 +143,7 @@ const MyBuses = () => {
         return;
       }
 
-      await axios.post('https://backend-brahmos-bus.onrender.com/api/busregister/createbusroute', formData, {
+      await axios.post('https://brahmosbackend.onrender.com/api/busregister/createbusroute', formData, {
         headers: { Authorization: `Bearer ${token}` }
       });
 

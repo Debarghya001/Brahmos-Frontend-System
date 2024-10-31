@@ -30,7 +30,7 @@ const Signup = () => {
     setLoading(true);
     e.preventDefault();
 
-    axios.post('https://backend-brahmos-bus.onrender.com/api/auth/login', { email, password })
+    axios.post('https://brahmosbackend.onrender.com/api/auth/login', { email, password })
       .then((res) => {
         localStorage.setItem('token', res.data.token);
         localStorage.setItem('role', res.data.role);

@@ -47,7 +47,7 @@ const Profile = () => {
           navigate('/login');
           return;
         }
-        const response = await axios.get('https://backend-brahmos-bus.onrender.com/api/auth/myprofile', {
+        const response = await axios.get('https://brahmosbackend.onrender.com/api/auth/myprofile', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setProfileData(response.data.profile);
@@ -78,7 +78,7 @@ const Profile = () => {
       }
 
       const response = await axios.put(
-        `https://backend-brahmos-bus.onrender.com/api/auth/myprofile/update/${userId}`,
+        `https://brahmosbackend.onrender.com/api/auth/myprofile/update/${userId}`,
         updatedProfile,
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -109,7 +109,7 @@ const Profile = () => {
         return;
       }
       const response = await axios.put(
-        `https://backend-brahmos-bus.onrender.com/api/auth/myprofile/updatepassword/${userId}`,
+        `https://brahmosbackend.onrender.com/api/auth/myprofile/updatepassword/${userId}`,
         { password: oldPassword, newpassword: newPassword },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -133,22 +133,22 @@ const Profile = () => {
         return;
       }
       if (role === "Admin") {
-        await axios.delete(`https://backend-brahmos-bus.onrender.com/api/busbooking/alldelete/${userId}`, {
+        await axios.delete(`https://brahmosbackend.onrender.com/api/busbooking/alldelete/${userId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
-        await axios.delete(`https://backend-brahmos-bus.onrender.com/api/busregister/alldeletebus/${userId}`, {
+        await axios.delete(`https://brahmosbackend.onrender.com/api/busregister/alldeletebus/${userId}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
-        const response = await axios.delete(`https://backend-brahmos-bus.onrender.com/api/auth/delete/${userId}`, {
+        const response = await axios.delete(`https://brahmosbackend.onrender.com/api/auth/delete/${userId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         alert(response.data.message);
       }
       else {
-        await axios.delete(`https://backend-brahmos-bus.onrender.com/api/busbooking/alldelete/${userId}`, {
+        await axios.delete(`https://brahmosbackend.onrender.com/api/busbooking/alldelete/${userId}`, {
           headers: { Authorization: `Bearer ${token}` },
         })
-        const response = await axios.delete(`https://backend-brahmos-bus.onrender.com/api/auth/delete/${userId}`, {
+        const response = await axios.delete(`https://brahmosbackend.onrender.com/api/auth/delete/${userId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         alert(response.data.message);

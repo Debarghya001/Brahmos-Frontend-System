@@ -31,7 +31,7 @@ const Dashboard = () => {
           navigate('/login');
           return;
         }
-        const response = await axios.get('https://backend-brahmos-bus.onrender.com/api/busbooking/admin/sales', {
+        const response = await axios.get('https://brahmosbackend.onrender.com/api/busbooking/admin/sales', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setData(response.data);

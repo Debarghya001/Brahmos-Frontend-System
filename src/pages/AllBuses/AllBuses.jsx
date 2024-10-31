@@ -10,7 +10,7 @@ const AllBuses = () => {
   useEffect(() => {
     const fetchBuses = async () => {
       try {
-        const response = await axios.get('https://backend-brahmos-bus.onrender.com/api/busregister/getallbuses'); // Adjust your URL as necessary
+        const response = await axios.get('https://brahmosbackend.onrender.com/api/busregister/getallbuses'); // Adjust your URL as necessary
         setBuses(response.data.AvailableBusses);
       } catch (error) {
         console.error('Error fetching buses:', error);

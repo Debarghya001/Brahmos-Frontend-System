@@ -42,7 +42,7 @@ export default function BookingHistory() {
                 return;
             }
 
-            const response = await axios.get('https://backend-brahmos-bus.onrender.com/api/busbooking/client/mybookings', {
+            const response = await axios.get('https://brahmosbackend.onrender.com/api/busbooking/client/mybookings', {
                 headers: { Authorization: `Bearer ${token}` },
             });
 
@@ -58,7 +58,7 @@ export default function BookingHistory() {
 
     const handleDelete = async () => {
         try {
-            await axios.delete(`https://backend-brahmos-bus.onrender.com/api/busbooking/cancel/mybookings/${selectedBookingId}`, {
+            await axios.delete(`https://brahmosbackend.onrender.com/api/busbooking/cancel/mybookings/${selectedBookingId}`, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`,
                 },

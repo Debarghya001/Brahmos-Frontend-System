@@ -92,7 +92,7 @@ export default function Adminpage() {
 
   const handlelogout = async () => {
     try {
-      await axios.post('https://backend-brahmos-bus.onrender.com/api/auth/logout', {}, {
+      await axios.post('https://brahmosbackend.onrender.com/api/auth/logout', {}, {
         withCredentials: true, // Ensures cookies are included
       });
       // Clear localStorage items
