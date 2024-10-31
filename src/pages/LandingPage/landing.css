@@ -1,0 +1,314 @@
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.back-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(60%);
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  z-index: 1;
+}
+
+.heading {
+  position: absolute;
+  top: 25%; /* Keep this for overall responsiveness */
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+  font-size: 2.5rem;
+  z-index: 2;
+  -webkit-text-stroke: 1px black;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+.homebutton, .loginbutton {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: #183153;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  z-index: 2;
+  padding: 12px 20px; /* Base padding */
+  font-size: 1rem; /* Base font size */
+}
+
+.homebutton {
+  top: 50%; /* Adjusted to 50% */
+  left: 39%; /* Centered */
+  transform: translate(-50%, -50%); /* Centering */
+}
+
+.loginbutton {
+  top: 50%; /* Below home button */
+  left: 60%; /* Centered */
+  transform: translate(-50%, -50%); /* Centering */
+}
+
+.homebutton:after, .loginbutton:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: #ffd401;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+}
+
+.homebutton:hover::after, .loginbutton:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+.homebutton span, .loginbutton span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 0; /* Remove padding for span to avoid overflow */
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 0.1em; /* Adjusted spacing for smaller screens */
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+}
+
+.homebutton:hover span, .loginbutton:hover span {
+  color: #183153;
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(0.95);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+@media (max-width: 820px) {
+  .heading {
+      font-size: 2rem; /* Reduce heading size */
+      top: 20%; /* Adjust position for better visibility */
+      color: white;
+  }
+
+  .homebutton, .loginbutton {
+      padding: 10px 15px; /* Adjust padding for smaller screens */
+      font-size: 0.9rem; /* Smaller font size */
+      left: 50%; /* Center buttons on smaller screens */
+      transform: translate(-50%, -50%); /* Center the buttons */
+      width: 40%; /* Ensure buttons don't stretch too wide */
+  }
+
+  .loginbutton {
+      top: 70%; /* Adjust position for login button */
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+      font-size: 1.5rem; /* Further reduce heading size */
+      top: 20%; /* Adjust position */
+      color: white;
+  }
+
+  .homebutton, .loginbutton {
+      padding: 8px 10px; /* Adjust padding */
+      font-size: 0.8rem; /* Smaller font size */
+  }
+
+  .homebutton {
+      top: 55%; /* Adjust position */
+  }
+
+  .loginbutton {
+      top: 65%; /* Adjust position */
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+      font-size: 1.5rem; /* Further reduce heading size */
+      top: 20%; /* Adjust position */
+      color: white;
+  }
+
+  .homebutton, .loginbutton {
+      padding: 8px 10px; /* Adjust padding */
+      font-size: 0.8rem; /* Smaller font size */
+  }
+
+  .homebutton {
+      top: 55%; /* Adjust position */
+  }
+
+  .loginbutton {
+      top: 65%; /* Adjust position */
+  }
+}
+
+
+
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1274px) and (orientation:landscape) {
+  .heading {
+    font-size: 2.5rem; /* Further reduce heading size */
+    top: 20%; /* Adjust position */
+    color: white;
+}
+
+.homebutton, .loginbutton {
+    padding: 15px 31px; /* Adjust padding */
+    font-size: 0.8rem; /* Smaller font size */
+}
+
+.homebutton {
+    top: 60%; /* Adjust position */
+}
+
+.loginbutton {
+    top: 60%; /* Adjust position */
+}
+}
+
+/* Spinner Styles remain untouched */
+.spinner-container {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+--uib-size: 60px; /* Increase the size */
+--uib-color: #ffffff; /* Ensure the spinner color is bright white */
+--uib-speed: 0.9s;
+display: flex;
+align-items: center;
+justify-content: center;
+height: var(--uib-size);
+width: var(--uib-size);
+z-index: 3; /* Keep it on top */
+}
+
+.dot {
+position: absolute;
+top: 0;
+left: 0;
+display: flex;
+align-items: center;
+justify-content: flex-start;
+height: 100%;
+width: 100%;
+}
+
+.dot::before {
+content: '';
+height: 25%; /* Increase the dot size */
+width: 25%; /* Increase the dot size */
+border-radius: 50%;
+background-color: var(--uib-color);
+transform: scale(0);
+opacity: 1; /* Maximize opacity for brightness */
+animation: pulse calc(var(--uib-speed) * 1.111) ease-in-out infinite;
+transition: background-color 0.3s ease;
+}
+
+.dot:nth-child(2) {
+transform: rotate(45deg);
+}
+
+.dot:nth-child(2)::before {
+animation-delay: calc(var(--uib-speed) * -0.875);
+}
+
+.dot:nth-child(3) {
+transform: rotate(90deg);
+}
+
+.dot:nth-child(3)::before {
+animation-delay: calc(var(--uib-speed) * -0.75);
+}
+
+.dot:nth-child(4) {
+transform: rotate(135deg);
+}
+
+.dot:nth-child(4)::before {
+animation-delay: calc(var(--uib-speed) * -0.625);
+}
+
+.dot:nth-child(5) {
+transform: rotate(180deg);
+}
+
+.dot:nth-child(5)::before {
+animation-delay: calc(var(--uib-speed) * -0.5);
+}
+
+.dot:nth-child(6) {
+transform: rotate(225deg);
+}
+
+.dot:nth-child(6)::before {
+animation-delay: calc(var(--uib-speed) * -0.375);
+}
+
+.dot:nth-child(7) {
+transform: rotate(270deg);
+}
+
+.dot:nth-child(7)::before {
+animation-delay: calc(var(--uib-speed) * -0.25);
+}
+
+.dot:nth-child(8) {
+transform: rotate(315deg);
+}
+
+.dot:nth-child(8)::before {
+animation-delay: calc(var(--uib-speed) * -0.125);
+}
+
+@keyframes pulse {
+0%,
+100% {
+    transform: scale(0);
+    opacity: 1;
+}
+50% {
+    transform: scale(1);
+    opacity: 1;
+}
+}

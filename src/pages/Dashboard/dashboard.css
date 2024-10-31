@@ -1,0 +1,160 @@
+body {
+  overflow: hidden; 
+}
+
+
+body.dashboard-scroll {
+  overflow-y: auto; 
+}
+
+.dashboard {
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  max-width: 1400px;
+  margin: 40px auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.dashboard-title {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #2e3c55;
+  font-size: 42px;
+  font-weight: 700;
+  position: relative;
+}
+
+.dashboard-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 5px;
+  background-color: #00c6ff;
+  margin: 10px auto 0;
+  border-radius: 4px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.dashboard-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px 30px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-card::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 160px;
+  height: 160px;
+  background-color: rgba(0, 198, 255, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.dashboard-card h6 {
+  color: #607d8b;
+  font-size: 18px;
+  font-weight: 600;
+  z-index: 1;
+  position: relative;
+}
+
+.dashboard-card h4 {
+  color: #2e3c55;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 15px 0;
+  z-index: 1;
+  position: relative;
+}
+
+.recharts-wrapper {
+  margin: 50px 0;
+}
+
+.recharts-bar-rectangle {
+  fill: #00c6ff;
+}
+
+.recharts-cartesian-axis-line, .recharts-cartesian-grid-horizontal line, .recharts-cartesian-grid-vertical line {
+  stroke: rgba(0, 198, 255, 0.2);
+}
+
+.recharts-cartesian-axis-tick text {
+  font-size: 14px;
+  font-weight: 500;
+  fill: #2e3c55;
+}
+
+.recharts-tooltip-wrapper {
+  font-size: 16px;
+  background-color: rgba(46, 60, 85, 0.9);
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.recharts-tooltip-label {
+  font-weight: 700;
+  color: #00c6ff;
+}
+
+.recharts-pie-label {
+  fill: #2e3c55;
+  font-weight: bold;
+}
+
+.pie-chart path {
+  stroke: #ffffff;
+  stroke-width: 2px;
+}
+
+.grid-container .grid-item {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.grid-container .grid-item:hover::before {
+  transform: scale(1.2);
+  opacity: 0.3;
+}
+
+.grid-container .grid-item::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background-color: #00c6ff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.4s ease;
+}
+
+.grid-container .grid-item:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0.05;
+}

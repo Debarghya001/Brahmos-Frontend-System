@@ -1,0 +1,140 @@
+.seating-layout {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 1000;
+  width: 90%;
+  max-width: 700px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.seats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  grid-gap: 10px;
+  margin-top: 20px;
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.seat.selected {
+  background-color: green;
+  color: white;
+}
+
+.seat.sold {
+  background-color: red;
+  cursor: not-allowed;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff1a1a;
+}
+
+.proceed-button {
+  background-color: #4CAF50;
+}
+
+.proceed-button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive styles */
+@media only screen and (min-width: 960px) {
+  .seating-layout {
+      width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .seating-layout {
+      width: 60%;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .seating-layout {
+      width: 50%;
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
+  .seating-layout {
+      width: 95%;
+  }
+
+  .seat {
+      width: 30px;
+      height: 30px;
+  }
+  .seating-heading{
+    font-size: 15px;
+  }
+  #seating-button{
+    padding: 6px 15px;
+  }
+}
+
+@media only screen and (device-width: 768px) {
+  .seating-layout {
+      width: 80%;
+  }
+
+  .seat {
+      width: 35px;
+      height: 35px;
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+  .seating-layout {
+      width: 85%;
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+  .seating-layout {
+      width: 80%;
+  }
+}

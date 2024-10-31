@@ -1,0 +1,150 @@
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    min-height: 100vh; /* Ensure it takes full height */
+    overflow-y: auto; /* Enable scrolling on this page */
+}
+
+.about-card {
+    max-width: 1000px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.about-image {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.about-card .MuiCardContent-root {
+    padding: 40px;
+}
+
+.about-button{
+    position: relative !important;
+    left: 24vw;
+}
+
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+.about-card {
+    max-width: 1000px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.about-image {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.about-card .MuiCardContent-root {
+    padding: 40px;
+}
+
+.about-button {
+    position: relative !important;
+    left: 24vw;
+}
+
+@media only screen and (max-width: 480px) {
+    .about-card {
+        padding: 20px;
+    }
+
+    .about-image {
+        height: 250px;
+    }
+
+    .about-card .MuiCardContent-root {
+        padding: 20px;
+    }
+    .about-button {
+        position: relative !important;
+        left: 13vw;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+    .about-card {
+        padding: 30px;
+    }
+
+    .about-image {
+        height: 300px;
+    }
+
+    .about-card .MuiCardContent-root {
+        padding: 30px;
+    }
+    .about-button {
+        position: relative !important;
+        left: 28vw;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    .about-card {
+        padding: 40px;
+    }
+
+    .about-image {
+        height: 350px;
+    }
+
+    .about-card .MuiCardContent-root {
+        padding: 40px;
+    }
+    .about-button {
+        position: relative !important;
+        left: 30vw;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .about-card {
+        padding: 50px;
+    }
+
+    .about-image {
+        height: 400px;
+    }
+
+    .about-card .MuiCardContent-root {
+        padding: 50px;
+    }
+    .about-button {
+        position: relative !important;
+        left: 24vw;
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+    .about-card {
+        padding: 60px;
+    }
+
+    .about-image {
+        height: 450px;
+    }
+
+    .about-card .MuiCardContent-root {
+        padding: 60px;
+    }
+    .about-button {
+        position: relative !important;
+        left: 24vw;
+    }
+}

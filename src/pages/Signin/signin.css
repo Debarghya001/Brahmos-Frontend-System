@@ -1,0 +1,182 @@
+body {    
+  padding: 0;    
+  margin: 0;    
+  height: 100%;    
+  width: 100%;    
+  overflow: hidden;
+}
+
+.container {    
+  height: 100vh;    
+  width: 100vw;    
+  overflow: hidden;    
+  position: relative;    
+  display: flex; /* Center contents vertically and horizontally */    
+  align-items: center;    
+  justify-content: center;
+}
+
+.backimg {    
+  height: 100%;    
+  width: 100%;    
+  object-fit: cover;    
+  display: block;    
+  filter: brightness(70%);
+}
+
+.gradient {    
+  position: absolute;    
+  top: 0;    
+  left: 0;    
+  height: 100%;    
+  width: 100%;    
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+}
+
+/* Form Styles */
+.form {  
+  display: flex;  
+  flex-direction: column;  
+  gap: 10px;  
+  max-width: 350px;  
+  background-color: #fff;  
+  padding: 38px;  
+  padding-right: 51px;  
+  border-radius: 20px;  
+  position: relative;  
+  left: 50%;  
+  top: 50%;  
+  transform: translate(-50%,-50%);
+}
+
+.title {  
+  font-size: 28px;  
+  color: royalblue;  
+  font-weight: 600;  
+  letter-spacing: -1px;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;
+}
+
+.message, .signin {  
+  color: rgba(88, 87, 87, 0.822);  
+  font-size: 14px;
+}
+
+.signin {  
+  text-align: center;
+}
+
+.signin a {  
+  color: royalblue;
+}
+
+.signin a:hover {  
+  text-decoration: underline royalblue;
+}
+
+.flex {  
+  display: flex;  
+  width: 100%;  
+  gap: 6px;
+  flex-wrap: wrap;  
+}
+
+.form label {  
+  position: relative;  
+  flex: 1;  
+  min-width: 100px;
+}
+
+.form label .input {  
+  width: 100%;  
+  padding: 10px 10px 20px 10px;  
+  outline: 0;  
+  border: 1px solid rgba(105, 105, 105, 0.397);  
+  border-radius: 10px;  
+  box-sizing: border-box;
+}
+
+.form label .input + span {  
+  position: absolute;  
+  left: 10px;  
+  top: 15px;  
+  color: grey;  
+  font-size: 0.9em;  
+  cursor: text;  
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {  
+  top: 15px;  
+  font-size: 0.9em;
+}
+
+.form label .input:focus + span, .form label .input:valid + span {  
+  top: 30px;  
+  font-size: 0.7em;  
+  font-weight: 600;
+}
+
+.form label .input:valid + span {  
+  color: green;
+}
+
+.submit {  
+  border: none;  
+  outline: none;  
+  background-color: royalblue;  
+  padding: 10px;  
+  border-radius: 10px;  
+  color: #fff;  
+  font-size: 16px;  
+  transition: 0.3s ease;  
+  width: 100%;  
+  max-width: 240px;  
+  margin: 10px auto 0;
+}
+
+.submit:hover {  
+  background-color: rgb(56, 90, 194);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .form {
+      max-width: 90%;
+      padding: 20px;
+      padding-right: 30px;
+      border-radius: 15px;
+  }
+
+  .title {
+      font-size: 24px;
+  }
+
+  .submit {
+      font-size: 14px;
+      padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form {
+    max-width: 75%;
+    padding: 15px;
+    padding-right: 20px;
+    border-radius: 10px;
+    position: relative;
+    top: 41%;
+  }
+
+  .title {
+      font-size: 20px;
+      padding-left: 6px;
+  }
+
+  .submit {
+      font-size: 12px;
+      padding: 6px;
+  }
+}
